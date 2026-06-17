@@ -5,7 +5,7 @@ withDefaults(
     variant?: 'accent' | 'fg'
   }>(),
   {
-    items: () => ['TDH MERCH', 'MEMBERS ONLY', 'DROP 01', 'EST. 2026', 'WEAR THE CLUB'],
+    items: () => ['TDH MERCH','Joswipe','SOLO MIEMBROS','TDH593oozz', 'DROP 01','Maikelreyes', 'EST. 2026', 'WEAR THE CLUB','Alexander1546'],
     variant: 'accent',
   },
 )

@@ -49,7 +49,7 @@ function cerrarSesion() {
         >
           T
         </span>
-        <span class="font-display text-2xl uppercase tracking-tight text-fg">TDH merch</span>
+        <span class="font-display text-2xl uppercase tracking-tight text-fg">TDH Club</span>
       </RouterLink>
 
       <!-- Buscador -->
