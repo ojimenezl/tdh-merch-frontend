@@ -90,6 +90,34 @@ body {
   animation: tdh-marquee 22s linear infinite;
 }
 
+/* Carrusel hero — grid y scan futurista */
+.home-carousel-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes tdh-scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.home-carousel-scan {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--accent) 12%, transparent) 50%,
+    transparent 100%
+  );
+  animation: tdh-scan 6s linear infinite;
+  opacity: 0.35;
+}
+
 /* Selección con el acento */
 ::selection {
   background: var(--accent);

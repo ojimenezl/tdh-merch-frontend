@@ -6,14 +6,13 @@ import type {
   Conversacion,
   Notificacion,
 } from '@/types'
+import { MOCK_IMAGES } from '@/data/mockImages'
 
 /**
  * Base de datos MOCK en memoria.
  * Imita lo que más adelante devolverá MongoDB a través del backend Nest.
  * Los servicios trabajan SIEMPRE sobre copias de estos datos.
  */
-
-const img = (seed: string) => `https://picsum.photos/seed/${seed}/700/700`
 
 export const categorias: Categoria[] = [
   {
@@ -107,9 +106,8 @@ export const productos: Producto[] = [
     creadoEn: '2026-05-01T10:00:00.000Z',
     atributos: [{ clave: 'material', valor: 'Algodón 100%' }],
     imagenes: [
-      { id: 'i1', url: img('camiseta1'), alt: 'Camiseta TDH frente' },
-      { id: 'i2', url: img('camiseta2'), alt: 'Camiseta TDH espalda' },
-      { id: 'i3', url: img('camiseta3'), alt: 'Camiseta TDH detalle' },
+      { id: 'i1', url: MOCK_IMAGES.camiseta, alt: 'Camiseta TDH frente' },
+      { id: 'i2', url: MOCK_IMAGES.camiseta, alt: 'Camiseta TDH detalle' },
     ],
     variantes: [
       {
@@ -156,8 +154,8 @@ export const productos: Producto[] = [
     creadoEn: '2026-05-10T10:00:00.000Z',
     atributos: [{ clave: 'material', valor: 'Algodón + poliéster' }],
     imagenes: [
-      { id: 'i1', url: img('hoodie1'), alt: 'Hoodie TDH frente' },
-      { id: 'i2', url: img('hoodie2'), alt: 'Hoodie TDH detalle' },
+      { id: 'i1', url: MOCK_IMAGES.promo, alt: 'Hoodie TDH frente' },
+      { id: 'i2', url: MOCK_IMAGES.promo, alt: 'Hoodie TDH detalle' },
     ],
     variantes: [
       {
@@ -194,8 +192,8 @@ export const productos: Producto[] = [
     creadoEn: '2026-05-15T10:00:00.000Z',
     atributos: [{ clave: 'material', valor: 'Cerámica' }],
     imagenes: [
-      { id: 'i1', url: img('taza1'), alt: 'Taza TDH' },
-      { id: 'i2', url: img('taza2'), alt: 'Taza TDH detalle' },
+      { id: 'i1', url: MOCK_IMAGES.verde, alt: 'Taza TDH' },
+      { id: 'i2', url: MOCK_IMAGES.verde, alt: 'Taza TDH detalle' },
     ],
     variantes: [
       {
@@ -230,7 +228,7 @@ export const productos: Producto[] = [
       { clave: 'isbn', valor: '978-9942-00-123-4' },
       { clave: 'paginas', valor: 240 },
     ],
-    imagenes: [{ id: 'i1', url: img('libro1'), alt: 'Portada del libro' }],
+    imagenes: [{ id: 'i1', url: MOCK_IMAGES.rosa, alt: 'Portada del libro' }],
     variantes: [],
   },
 ]
@@ -313,7 +311,7 @@ export const pedidos: Pedido[] = [
           { clave: 'talla', valor: 'M' },
           { clave: 'color', valor: 'Negro' },
         ],
-        imagen: img('camiseta1'),
+        imagen: MOCK_IMAGES.camiseta,
         precioUnitario: 18.9,
         cantidad: 1,
       },
@@ -325,7 +323,7 @@ export const pedidos: Pedido[] = [
           { clave: 'talla', valor: 'M' },
           { clave: 'color', valor: 'Gris' },
         ],
-        imagen: img('hoodie1'),
+        imagen: MOCK_IMAGES.promo,
         precioUnitario: 39.9,
         cantidad: 1,
       },
@@ -365,7 +363,7 @@ export const pedidos: Pedido[] = [
         varianteId: 'v-taza-350',
         nombreProducto: 'Taza TDH Logo',
         atributos: [{ clave: 'capacidad', valor: '350 ml' }],
-        imagen: img('taza1'),
+        imagen: MOCK_IMAGES.verde,
         precioUnitario: 9.5,
         cantidad: 1,
       },
